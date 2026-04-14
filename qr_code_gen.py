@@ -2,7 +2,11 @@ import qrcode
 
 link = input("Enter your link : ")
 
-qr = qrcode.make(link) #converts the link into QRcode
+qr = qrcode.QRCode(
+    version=1,
+    box_size=10,
+    border=5
+) #converts the link into QRcode
 
 qr_name = input("Enter a name to save the QR : ")
 
